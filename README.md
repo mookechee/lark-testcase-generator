@@ -109,7 +109,7 @@ claude --plugin-dir ~/.claude/plugins/lark-testcase-generator
 
 ```
 帮我为这个飞书项目单子生成测试用例：
-https://project.feishu.cn/uts5wn/story/detail/6596729761
+https://project.feishu.cn/xxx/story/detail/xxx
 ```
 
 ## 测试用例格式
