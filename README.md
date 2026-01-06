@@ -1,4 +1,4 @@
-# Mookechee Plugin Marketplace
+# Mookechee CC Plugins
 
 Claude Code 插件市场，提供飞书项目相关的效率工具。
 
@@ -13,13 +13,13 @@ Claude Code 插件市场，提供飞书项目相关的效率工具。
 ### 添加 Marketplace
 
 ```bash
-/plugin marketplace add mookechee/mookechee
+/plugin marketplace add mookechee/mookechee-cc-plugins
 ```
 
 ### 安装插件
 
 ```bash
-/plugin install lark-testcase-generator@mookechee
+/plugin install lark-testcase-generator@mookechee-cc-plugins
 ```
 
 或使用交互式界面：
@@ -33,13 +33,13 @@ Claude Code 插件市场，提供飞书项目相关的效率工具。
 ### 本地开发模式
 
 ```bash
-claude --plugin-dir /path/to/mookechee
+claude --plugin-dir /path/to/mookechee-cc-plugins
 ```
 
 ## 目录结构
 
 ```
-mookechee/
+mookechee-cc-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json          # Marketplace 配置
 ├── plugins/

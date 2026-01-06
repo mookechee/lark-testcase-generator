@@ -1,10 +1,10 @@
 {
-  "name": "mookechee",
+  "name": "mookechee-cc-plugins",
   "owner": {
     "name": "mookechee"
   },
   "metadata": {
-    "description": "飞书项目测试用例生成工具集",
+    "description": "Claude Code 插件集 - 飞书项目效率工具",
     "version": "1.0.0"
   },
   "plugins": [
@@ -16,7 +16,7 @@
       "author": {
         "name": "mookechee"
       },
-      "repository": "https://github.com/mookechee/mookechee",
+      "repository": "https://github.com/mookechee/mookechee-cc-plugins",
       "license": "MIT",
       "keywords": ["lark", "feishu", "testcase", "xmind", "opml"],
       "category": "productivity"
