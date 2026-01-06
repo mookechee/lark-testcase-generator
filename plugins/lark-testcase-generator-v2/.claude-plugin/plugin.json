@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "【V2开发版】从飞书项目单子自动生成OPML格式的XMind测试用例。增强PRD UI/交互设计测试用例生成，支持验收标准覆盖检查。",
   "author": {
-    "name": "qimohan"
+    "name": "mookechee"
   },
   "license": "MIT",
   "keywords": [
