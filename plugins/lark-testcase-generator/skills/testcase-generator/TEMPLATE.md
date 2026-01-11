@@ -212,6 +212,162 @@
 </outline>
 ```
 
+### 软件/固件兼容性测试（重点）
+
+```xml
+<outline text="软件固件兼容性测试">
+  <outline text="新软件+旧固件-{功能名称}验证">
+    <outline text="设备运行旧版本固件V{X.X}，安装新版本软件V{Y.Y}">
+      <outline text="执行{核心功能操作}">
+        <outline text="{功能}正常工作，新旧版本协同正常">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="旧软件+新固件-{功能名称}验证">
+    <outline text="设备运行新版本固件V{X.X}，安装旧版本软件V{Y.Y}">
+      <outline text="执行{核心功能操作}">
+        <outline text="{功能}正常工作，新旧版本协同正常">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="协议版本兼容-{协议名称}">
+    <outline text="客户端使用协议V{X}，服务端使用协议V{Y}">
+      <outline text="发起{通信操作}">
+        <outline text="协议协商成功，通信正常">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="数据格式兼容-{数据类型}">
+    <outline text="存在旧版本格式的{数据类型}数据">
+      <outline text="使用新版本软件读取/处理该数据">
+        <outline text="数据正确解析，功能正常">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="升级路径验证-从V{X}升级到V{Y}">
+    <outline text="系统运行旧版本V{X}，数据正常">
+      <outline text="执行升级到V{Y}的操作">
+        <outline text="升级成功，数据完整迁移，功能正常">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="降级回滚验证-从V{Y}回滚到V{X}">
+    <outline text="系统运行新版本V{Y}">
+      <outline text="执行回滚到V{X}的操作">
+        <outline text="回滚成功，系统恢复到旧版本状态">
+          <outline text="P1"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="配置兼容-旧配置在新版本中的处理">
+    <outline text="存在旧版本的配置文件">
+      <outline text="使用新版本软件加载旧配置">
+        <outline text="配置正确读取，缺省值正确填充">
+          <outline text="P1"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+</outline>
+```
+
+### 性能测试
+
+```xml
+<outline text="性能测试">
+  <outline text="响应时间-{操作名称}">
+    <outline text="系统处于正常负载状态">
+      <outline text="执行{操作}，记录响应时间">
+        <outline text="响应时间小于{X}ms，满足性能要求">
+          <outline text="P1"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="并发处理-{并发数}用户同时操作">
+    <outline text="系统正常运行">
+      <outline text="{并发数}个用户同时执行{操作}">
+        <outline text="所有请求正常处理，无错误，响应时间在可接受范围内">
+          <outline text="P1"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="吞吐量-{操作名称}">
+    <outline text="系统处于峰值负载状态">
+      <outline text="持续发送{操作}请求，统计每秒处理数">
+        <outline text="吞吐量达到{X}TPS，满足性能指标">
+          <outline text="P1"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="资源占用-{场景名称}">
+    <outline text="系统正常运行">
+      <outline text="执行{操作场景}，监控CPU/内存/磁盘使用">
+        <outline text="资源占用在合理范围内（CPU小于{X}%，内存小于{Y}MB）">
+          <outline text="P2"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+</outline>
+```
+
+### 安全测试
+
+```xml
+<outline text="安全测试">
+  <outline text="权限控制-{功能名称}">
+    <outline text="用户未登录或无权限">
+      <outline text="尝试访问{受保护功能}">
+        <outline text="访问被拒绝，返回权限不足提示">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="输入校验-{输入字段}">
+    <outline text="功能正常可用">
+      <outline text="在{输入字段}输入恶意内容（SQL注入/XSS/特殊字符）">
+        <outline text="输入被正确过滤或拒绝，系统无异常">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="数据安全-{敏感数据}传输">
+    <outline text="系统正常运行">
+      <outline text="执行涉及{敏感数据}的操作，抓包分析">
+        <outline text="{敏感数据}已加密传输，无法被窃取">
+          <outline text="P0"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+  <outline text="会话安全-会话劫持防护">
+    <outline text="用户已登录">
+      <outline text="尝试使用过期/伪造的会话令牌访问">
+        <outline text="访问被拒绝，要求重新认证">
+          <outline text="P1"/>
+        </outline>
+      </outline>
+    </outline>
+  </outline>
+</outline>
+```
+
 ## 优先级分配指南
 
 ### P0 场景（必须测试）
@@ -221,6 +377,8 @@
 - 关键状态转换
 - 主要 API 正常调用
 - 端到端关键路径
+- 新旧软件/固件核心功能兼容
+- 权限控制和输入校验（安全相关）
 
 ### P1 场景（应该测试）
 
@@ -229,6 +387,11 @@
 - 边界条件
 - 次要 API 调用
 - 状态恢复
+- 升级/降级路径验证
+- 协议版本兼容
+- 数据格式兼容
+- 性能基准测试（响应时间、并发处理）
+- 会话安全
 
 ### P2 场景（可选测试）
 
@@ -236,3 +399,6 @@
 - 日志/调试信息
 - 性能优化验证
 - 可选参数
+- 稳定性测试
+- 极端场景
+- 资源占用监控
