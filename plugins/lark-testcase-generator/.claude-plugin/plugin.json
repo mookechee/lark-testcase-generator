@@ -1,6 +1,6 @@
 {
   "name": "lark-testcase-generator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "从飞书项目单子自动生成OPML格式的XMind测试用例。通过飞书项目MCP读取需求描述、验收标准和技术设计文档，梳理用户操作流程后生成结构化测试用例。",
   "author": {
     "name": "mookechee"
