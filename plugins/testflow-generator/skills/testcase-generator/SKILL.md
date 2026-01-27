@@ -1,11 +1,11 @@
 ---
-name: testflow-generator
-description: 基于 TestFlow 四阶段工作流的智能测试用例生成器。当用户需要为 Story/需求/缺陷生成测试用例、创建 Markdown 格式的 markmap 思维导图测试用例、根据技术方案设计测试场景、或者需要生成测试覆盖矩阵时使用。支持功能测试、边界测试、异常测试、兼容性测试、性能测试、安全测试等多种测试类型。
+name: casepilot
+description: 智能测试用例生成器。当用户需要为 Story/需求/缺陷生成测试用例、创建 Markdown 格式的 markmap 思维导图测试用例、根据技术方案设计测试场景、或者需要生成测试覆盖矩阵时使用。支持功能测试、边界测试、异常测试、兼容性测试、性能测试、安全测试等多种测试类型。
 ---
 
-# TestFlow 智能测试用例生成器
+# CasePilot 智能测试用例生成器
 
-基于 TestFlow 四阶段工作流的智能测试用例生成 Skill，从需求文档自动生成 **混合结构 Markdown** 格式的测试用例（可用 markmap 渲染）。
+智能测试用例生成 Skill，从需求文档自动生成 **混合结构 Markdown** 格式的测试用例（可用 markmap 渲染）。
 
 ## MCP 服务器依赖
 
@@ -55,7 +55,7 @@ description: 基于 TestFlow 四阶段工作流的智能测试用例生成器。
 
 4. 重启 Claude Code 后重试
 
-或者运行 /testflow-generator:check-mcp 查看详细配置指南。
+或者运行 /casepilot:check-mcp 查看详细配置指南。
 ```
 
 ## 功能概述

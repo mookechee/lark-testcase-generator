@@ -10,13 +10,13 @@ description: 从需求文档生成测试用例。支持飞书项目单URL、飞�
 
 ```bash
 # 从飞书项目单生成
-/testflow-generator:generate https://project.feishu.cn/xxx/story/detail/xxx
+/casepilot:generate https://project.feishu.cn/xxx/story/detail/xxx
 
 # 从飞书云文档生成
-/testflow-generator:generate https://xxx.feishu.cn/docx/xxx
+/casepilot:generate https://xxx.feishu.cn/docx/xxx
 
 # 从本地文件生成
-/testflow-generator:generate ./docs/requirement.md
+/casepilot:generate ./docs/requirement.md
 ```
 
 ---

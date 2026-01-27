@@ -1,6 +1,6 @@
-# TestFlow Generator
+# CasePilot
 
-基于 TestFlow 四阶段工作流的智能测试用例生成器。从需求文档自动生成 **混合结构 Markdown** 格式的测试用例（可用 markmap 渲染）。
+智能测试用例生成器。从需求文档自动生成 **混合结构 Markdown** 格式的测试用例（可用 markmap 渲染）。
 
 ## 功能特性
 
@@ -31,16 +31,16 @@
 
 ```bash
 # 从飞书项目单生成
-/testflow-generator:generate https://project.feishu.cn/xxx/story/detail/xxx
+/casepilot:generate https://project.feishu.cn/xxx/story/detail/xxx
 
 # 从飞书云文档生成
-/testflow-generator:generate https://xxx.feishu.cn/docx/xxx
+/casepilot:generate https://xxx.feishu.cn/docx/xxx
 
 # 从本地文件生成
-/testflow-generator:generate ./docs/requirement.md
+/casepilot:generate ./docs/requirement.md
 
 # 检查 MCP 配置
-/testflow-generator:check-mcp
+/casepilot:check-mcp
 ```
 
 ### 自然语言方式
@@ -131,7 +131,7 @@
 
 ## 与 lark-testcase-generator 的区别
 
-| 特性 | lark-testcase-generator | testflow-generator |
+| 特性 | lark-testcase-generator | casepilot |
 |------|-------------------------|-------------------|
 | 输入源 | 仅飞书项目单 | 飞书项目单 + 云文档 + 本地文件 |
 | 生成流程 | 单阶段 | 四阶段渐进式 |
@@ -144,7 +144,7 @@
 
 ### Q: MCP 服务未配置怎么办？
 
-运行 `/testflow-generator:check-mcp` 查看配置状态和指引。
+运行 `/casepilot:check-mcp` 查看配置状态和指引。
 
 ### Q: 可以只使用本地文件吗？
 
@@ -156,7 +156,7 @@
 
 ## 技术来源
 
-本插件的四阶段工作流和提示词设计参考自 [TestFlow](https://github.com/testflow/testflow) 项目。
+本插件的四阶段工作流设计参考自 TestFlow 方法论。
 
 ## 许可证
 
